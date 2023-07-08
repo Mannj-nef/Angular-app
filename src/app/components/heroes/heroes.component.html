@@ -1,0 +1,18 @@
+<div class="m-3 p-4 rounded-lg bg-blue-500 max-w-[600px] mx-auto text-white">
+  <h2>My Heroes</h2>
+  <ul class="heroes max-w-[400px] mt-3">
+    <!--  -->
+    <li *ngFor="let hero of heroes" class="my-4">
+      <button
+        [class.selected]="hero === selectedHero"
+        type="button"
+        (click)="onSelect(hero)"
+        class="rounded-lg overflow-hidden flex items-center gap-5 bg-gray-500 w-full"
+      >
+        <span class="badge p-3 bg-slate-800 text-white">{{ hero.id }}</span>
+        <span class="name text-slate-300">{{ hero.name }}</span>
+      </button>
+    </li>
+  </ul>
+  <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+</div>

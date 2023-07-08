@@ -7,9 +7,10 @@ import { HeaderComponent } from './components/header/header.component';
 
 import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
+import { MessagesComponent } from './components/messages/messages.component';
 
 @NgModule({
-  declarations: [AppComponent, HeroesComponent, HeaderComponent, HeroDetailComponent],
+  declarations: [AppComponent, HeroesComponent, HeaderComponent, HeroDetailComponent, MessagesComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,4 +1,8 @@
 <h1 class="text-blue-400">{{ title }}</h1>
 <h2>{{ name }}</h2>
-<app-heroes></app-heroes>
+<a routerLink="{{ routerHero.heroes.link }}">Heroes page</a>
+<a routerLink="{{ routerHero.dashBoard.link }}">Dashboard page</a>
+
+<router-outlet></router-outlet>
+
 <app-messages></app-messages>

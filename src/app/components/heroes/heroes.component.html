@@ -3,16 +3,15 @@
   <ul class="heroes max-w-[400px] mt-3">
     <!--  -->
     <li *ngFor="let hero of heroes" class="my-4">
-      <button
-        [class.selected]="hero === selectedHero"
-        type="button"
-        (click)="onSelect(hero)"
-        class="rounded-lg overflow-hidden flex items-center gap-5 bg-gray-500 w-full"
+      <a
+        routerLink="/detail/{{ hero.id }}"
+        class="rounded-lg overflow-hidden flex items-center gap-5 bg-gray-500 w-full p-3"
       >
-        <span class="badge p-3 bg-slate-800 text-white">{{ hero.id }}</span>
-        <span class="name text-slate-300">{{ hero.name }}</span>
-      </button>
+        <span class="badge p-2 flex items-center justify-center">{{
+          hero.id
+        }}</span>
+        {{ hero.name }}
+      </a>
     </li>
   </ul>
-  <app-hero-detail [hero]="selectedHero"></app-hero-detail>
 </div>
